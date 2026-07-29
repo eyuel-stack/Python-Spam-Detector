@@ -34,13 +34,22 @@ Trains the model, prints accuracy, then lets you type messages to classify live.
 ## Using It in Code
 
 ```python
-from src.detector import AdvancedSpamDetector
+from src.detector import EmailSpamDetector
 
-detector = AdvancedSpamDetector()
-detector.train(messages, labels) 
-detector.predict("Cl1ck here for your FR33 b0nus now!!!")
+detector = EmailSpamDetector()
+detector.train(split_ratio=0.8)
+detector.evaluate_model()
 
-detector.predict_log_proba("Cl1ck here for your FR33 b0nus now!!!")
+user_input = input("Enter message text to analyze > ").strip()
+
+result = detector.predict(user_input)
+
+print(f"\n--- Detection Result ---")
+print(f"Classification : {result['label']}")
+print(f"Confidence     : {result['confidence']}%")
+print(f"Spam Score : {result['spam_score']}")
+print(f"Ham Score  : {result['ham_score']}")
+print(f"------------------------")
 ```
 
 ## Why It Beats Basic Bag-of-Words
