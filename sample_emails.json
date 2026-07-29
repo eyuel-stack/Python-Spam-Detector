@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Urgent: You have won a free $1000 gift card! Click here to claim immediately.",
+    "label": "spam"
+  },
+  {
+    "text": "Exclusive offer! Double your crypto investment in 24 hours guaranteed.",
+    "label": "spam"
+  },
+  {
+    "text": "Verify your bank account password now or your account will be suspended.",
+    "label": "spam"
+  },
+  {
+    "text": "Win cash prizes today! Low interest loans available for urgent payout.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, are we still meeting at the library at 4 PM for group study?",
+    "label": "ham"
+  },
+  {
+    "text": "Please find attached the Python project code and documentation files.",
+    "label": "ham"
+  },
+  {
+    "text": "Don't forget to submit the assignment before midnight today.",
+    "label": "ham"
+  },
+  {
+    "text": "Thanks for sending over the script. I tested it and it works fine.",
+    "label": "ham"
+  }
+]
