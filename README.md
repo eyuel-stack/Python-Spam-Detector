@@ -1,4 +1,4 @@
-# Pure Python Spam Email Detector (Naive Bayes)
+# Pure Python Spam Email Detector
 
 A spam classifier built from scratch using Naive Bayes. The core math (tokenizing, probability, smoothing) is plain Python — only `math`, `re`, `collections`. `pandas` is just used to load/split the dataset, and `colorama` for colored CLI output.
 
@@ -37,6 +37,8 @@ Trains the model, prints accuracy, then lets you type messages to classify live.
 from src.detector import EmailSpamDetector
 
 detector = EmailSpamDetector()
+
+detector.load_dataset()
 detector.train(split_ratio=0.8)
 detector.evaluate_model()
 
